@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { Button } from "@/components/ui/button"
 
 function LeadForm() {
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ function LeadForm() {
       {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <div>
-        <label htmlFor="email" style={{ color: "red" }}>Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
@@ -49,7 +49,7 @@ function LeadForm() {
         />
       </div>
       <div>
-        <label htmlFor="description" style={{ color: "red" }}>Description:</label>
+        <label htmlFor="description">Description:</label>
         <textarea
           id="description"
           value={description}
@@ -57,7 +57,8 @@ function LeadForm() {
           required
         />
       </div>
-      <button type="submit" style={{ color: "red", padding: "20px", background: "pink" }}>Create Lead</button>
+      {/* <button type="submit">Create Lead</button> */}
+      <Button type="submit">Click me</Button>
     </form>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import LeadForm from "./components/LeadForm";
+import LeadForm from "../components/LeadForm";
 
 export default function Home() {
   const [leadData, setLeadData] = useState([]);
